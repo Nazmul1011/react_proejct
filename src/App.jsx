@@ -1,14 +1,19 @@
 import { Outlet } from "react-router";
+import Navbar from "./components/Navbar";
+import { FooterHome } from "./pages/home/footerHome";
 
 
-function App(){
+function App() {
+  return (
+    <div>
+      <Navbar />
 
-  return <div>
-    <nav>Navbar</nav>
-    <Outlet />
-    <main className="h-screen"></main>
-    
-    <footer>Footer</footer>
-  </div>
+      <main >
+        <Outlet />
+      </main>
+      <FooterHome></FooterHome>
+
+    </div>
+  );
 }
 export default App;
